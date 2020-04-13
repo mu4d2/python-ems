@@ -24,5 +24,13 @@ while True:
         deleteEmployee = input("Please enter employee's name you want to delete: ")
         employees.remove(deleteEmployee)
         print("Latest employees list =>", employees)
+    elif command == "view":
+        print(employees)
+    elif command == "check":
+        checkEmployee = input("Please enter employee's name you want to check: ")
+        if checkEmployee in employees:
+            print("Yes,", checkEmployee, "is in the record.")
+        else:
+            print(checkEmployee, "is not in your record.")
     elif command == "quit":
         break
